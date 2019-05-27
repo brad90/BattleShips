@@ -105,7 +105,7 @@ NewGame.prototype.assignNewCoordinatesToShipNewGame = function(){
 
 NewGame.prototype.newGameToBePlayed = function () {
 
-this.assignNewCoordinatesToShipNewGame()
+  this.assignNewCoordinatesToShipNewGame()
 
   let value = false
   while(value === false){
@@ -121,6 +121,11 @@ this.assignNewCoordinatesToShipNewGame()
 }
 
 
+NewGame.prototype.explosion = function (guess) {
+
+  const gridBox = document.querySelector(guess)
+  gridBox.classList.add('visibility')
+};
 
 NewGame.prototype.playerGuessInput = function() {
   PubSub.subscribe("BattleShipFormView:User-input-ready", (event) => {
@@ -129,6 +134,9 @@ NewGame.prototype.playerGuessInput = function() {
     NavalFleet.forEach(function(ship){
       if(ship.coordinates.includes(coordinate)){
         ship.succesfulHitToShip()
+        PubSub.publish("newGame: succesful-hit", coordinate)
+      }else{
+        PubSub.publish("newGame: succesful-fail", coordinate)
       }
     })
     console.log(NavalFleet);
@@ -137,7 +145,6 @@ NewGame.prototype.playerGuessInput = function() {
 
 
 newGame1.newGameToBePlayed();
-newGame1.playerGuessInput()
 
 
 
