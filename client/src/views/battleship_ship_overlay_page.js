@@ -33,6 +33,7 @@ Overlay.prototype.renderOverlayOpen = function () {
 Overlay.prototype.renderOverlayClose = function () {
   document.addEventListener('click', (event) =>{
     this.container.classList.add('visibility')
+    this.container.innerHTML = ''
   })
 };
 

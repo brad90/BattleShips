@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   overlay.bindEvents()
 
   const water = document.querySelector("#audio-water")
-  water.autoplay=true
+  
 
   const battleShipNewGame = new BattleShipNewGame ()
   battleShipNewGame.newGameToBePlayed()
