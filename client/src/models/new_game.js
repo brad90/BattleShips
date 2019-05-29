@@ -17,24 +17,25 @@ let assignedCoordinates =[];
 
 const newGame1 =  new NewGame
 
-
 NewGame.prototype.bindEvents = function () {
-  console.log("hello");
 
 };
 
-NewGame.prototype.randomNumber = function () {
-  const randomValueNumber = Math.floor(Math.random() * 10 + 1)
-  return randomValueNumber;
-};
+NewGame.prototype.newGameToBePlayed = function () {
 
-NewGame.prototype.randomLetter = function () {
-  let gridLetters = ['a','b','c','d','e','f','g','h','i','j']
-  const randomValueLetter = this.randomNumber();
-  const randomLetter = gridLetters[randomValueLetter -1 ]
-  return randomLetter;
-};
+  this.assignNewCoordinatesToShipNewGame()
 
+  let value = false
+  while(value === false){
+    for(i=0; i < assignedCoordinates.length; i++){
+      if(assignedCoordinates.includes(assignedCoordinates[i + 1]) === true){
+        assignedCoordinates = []
+        this.assignNewCoordinatesToShipNewGame()
+      }
+    }
+    value = true
+  }
+};
 
 
 NewGame.prototype.assignNewCoordinatesToShipNewGame = function(){
@@ -52,7 +53,6 @@ NewGame.prototype.assignNewCoordinatesToShipNewGame = function(){
     if (i%2 === 0){
 
       let evenNumberTrue__false = false
-
       while(evenNumberTrue__false === false){
 
         let coordinateLetterVertically = letters[this.randomNumber() -1]
@@ -60,10 +60,8 @@ NewGame.prototype.assignNewCoordinatesToShipNewGame = function(){
         let newCoordinateVertically = coordinateLetterVertically + coordinateNumberVertically
 
         if (coordinateNumberVertically + NavalFleet[i].hitPoints < 10 && assignedCoordinates.includes(newCoordinateVertically) === false){
-
           let value = 0
           alreadyAssignedLetters.push(coordinateLetterVertically)
-
           while(value < NavalFleet[i].hitPoints ){
             newCoordinateVertically = coordinateLetterVertically + coordinateNumberVertically
             NavalFleet[i].coordinates.push(newCoordinateVertically)
@@ -88,7 +86,6 @@ NewGame.prototype.assignNewCoordinatesToShipNewGame = function(){
           alreadyAssignedNumbers.push(coordinateNumberHorizontal)
           oddNumberTrue__False = true;
           let value = 0
-
           while(value < NavalFleet[i].hitPoints ){
             newCoordinateHorizontal = letters[indexOfLetterHorizontal] + coordinateNumberHorizontal
             NavalFleet[i].coordinates.push(newCoordinateHorizontal)
@@ -103,50 +100,39 @@ NewGame.prototype.assignNewCoordinatesToShipNewGame = function(){
 };
 
 
-NewGame.prototype.newGameToBePlayed = function () {
-
-  this.assignNewCoordinatesToShipNewGame()
-
-  let value = false
-  while(value === false){
-
-    for(i=0; i < assignedCoordinates.length; i++){
-      if(assignedCoordinates.includes(assignedCoordinates[i + 1]) === true){
-        assignedCoordinates = []
-        this.assignNewCoordinatesToShipNewGame()
-      }
-    }
-    value = true
-  }
-}
-
-
-NewGame.prototype.explosion = function (guess) {
-
-  const gridBox = document.querySelector(guess)
-  gridBox.classList.add('visibility')
+NewGame.prototype.randomNumber = function () {
+  const randomValueNumber = Math.floor(Math.random() * 10 + 1)
+  return randomValueNumber;
 };
+
+NewGame.prototype.randomLetter = function () {
+  let gridLetters = ['a','b','c','d','e','f','g','h','i','j'];
+  const randomValueLetter = this.randomNumber();
+  const randomLetter = gridLetters[randomValueLetter -1 ];
+  return randomLetter;
+};
+
 
 NewGame.prototype.playerGuessInput = function() {
   PubSub.subscribe("BattleShipFormView:User-input-ready", (event) => {
-    const coordinate = event.detail
+    const coordinate = event.detail;
     console.log(event.detail);
     NavalFleet.forEach(function(ship){
       if(ship.coordinates.includes(coordinate)){
-        ship.succesfulHitToShip()
         PubSub.publish("newGame: succesful-hit", coordinate)
+        ship.succesfulHitToShip()
       }else{
-        PubSub.publish("newGame: succesful-fail", coordinate)
+        PubSub.publish("newGame: succesful-fail", coordinate);
       }
     })
     console.log(NavalFleet);
   })
-}
+};
 
-
-newGame1.newGameToBePlayed();
-
-
+// NewGame.prototype.explosion = function (guess) {
+//   const gridBox = document.querySelector(guess)
+//   gridBox.classList.add('visibility')
+// };
 
 
 
