@@ -1,7 +1,6 @@
 const PubSub = require('../helpers/pub_sub.js')
 
-const Overlay = function(container){
-  this.container = container
+const Overlay = function(){
 }
 
 

@@ -21,7 +21,7 @@ HitOrMiss.prototype.bindEvents = function () {
 
 HitOrMiss.prototype.explosion = function (guess) {
   const gridBox = document.querySelector(`#${guess}`)
-  const explosion = document.querySelector('#explosion')
+  const explosion = document.querySelector('#audio-explosion')
   gridBox.classList.remove('visibility')
   explosion.play()
 

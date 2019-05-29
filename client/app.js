@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const overlayContainer = document.querySelector('#overlay')
   const overlay = new Overlay(overlayContainer)
-  // overlay.bindEvents()
+  overlay.bindEvents()
 
   const water = document.querySelector("#audio-water")
   water.autoplay=true

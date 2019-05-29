@@ -9,6 +9,7 @@ BattleShipInputForm.prototype.bindEvents = function () {
     event.preventDefault()
     const coordinates = event.target.coordinates.value
     PubSub.publish("BattleShipFormView:User-input-ready", coordinates)
+    this.form.reset()
   })
 };
 

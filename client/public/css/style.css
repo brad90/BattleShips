@@ -73,6 +73,7 @@ input:focus{
 }
 
 .game-ui-layout{
+  padding-top: 2%;
   display:flex;
 }
 

@@ -129,6 +129,8 @@ NewGame.prototype.playerGuessInput = function() {
   })
 };
 
+
+
 // NewGame.prototype.explosion = function (guess) {
 //   const gridBox = document.querySelector(guess)
 //   gridBox.classList.add('visibility')

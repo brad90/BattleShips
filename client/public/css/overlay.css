@@ -3,26 +3,43 @@
   width:100%;
   height:100%;
   z-index: 2;
-  background-color: black;
-  opacity: 0.75
-}
-
-#innerOverlay{
-  position: absolute;
-  width:400px;
-  height:200px;
-  z-index: 2;
-  top:30%;
-  left:30%;
+  background: url('../images/warship.jpg');
   opacity: 1;
+
   text-align: center;
-
-  background-color: white;
 }
 
-#innerOverlay h1{
-  color:black
+#youSunkShipType{
+
+  padding-top: 20%;
+  left:35%;
+  text-align: center;
 }
+
+#battleShipImageDiv{
+  width:100%;
+}
+
+#closeButton{
+  margin-top: 2%;
+  padding:1% 3%;
+
+  background-color: red;
+  color: white;
+  border:2px solid white;
+  outline:none;
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+#closeButton:hover{
+  outline:none
+}
+
+#closeButton:focus{
+  outline:none
+}
+
 
 
 #submit-fire{
