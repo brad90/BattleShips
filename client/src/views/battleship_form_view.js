@@ -13,6 +13,14 @@ BattleShipInputForm.prototype.bindEvents = function () {
   })
 };
 
+PubSub.subscribe("Battleship: ship-has-been-sunk-payload-ship-type", (event) => {
+  const battleShipType = event.detail
+  console.log(battleShipType);
+  const shipToRemove = document.querySelector('#'+ battleShipType)
+  console.log(shipToRemove);
+  shipToRemove.classList.add('visibility')
+})
+
 
 
 module.exports = BattleShipInputForm;

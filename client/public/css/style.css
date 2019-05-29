@@ -74,6 +74,7 @@ input:focus{
 
 .game-ui-layout{
   padding-top: 2%;
+  padding-right: 10%;
   display:flex;
 }
 
@@ -98,4 +99,18 @@ input:focus{
 
 .miss{
   background-color:rgba(255, 0, 0, 0.3);
+}
+
+.shipIcon{
+  width:80px;
+}
+.shipIconList{
+
+  display: inline-block;
+  width:100%;
+  padding-top: 5%;
+}
+
+.boatIcon{
+  margin-bottom: 2%;
 }

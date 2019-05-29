@@ -5,10 +5,10 @@ const PubSub = require('../helpers/pub_sub.js')
 const NewGame = function(){};
 
 
-const battleShip1 = new Battleship('Battleship', 3);
-const battleShip2 = new Battleship('Battleship', 3);
-const destroyer1 = new Battleship('Destroyer', 3);
-const destroyer2 = new Battleship('Destroyer', 3);
+const battleShip1 = new Battleship('Battleship1', 3);
+const battleShip2 = new Battleship('Battleship2', 3);
+const destroyer1 = new Battleship('Destroyer1', 3);
+const destroyer2 = new Battleship('Destroyer2', 3);
 const submarine = new Battleship('Submarine', 2);
 const aircraftCarrier = new Battleship('AircraftCarrier', 4);
 
