@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "web.js",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "devDependencies": {
     "webpack": "^4.32.1",
     "webpack-cli": "^3.3.2"
