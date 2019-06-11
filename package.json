@@ -11,7 +11,7 @@
   "scripts": {
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node client/app.js"
   },
   "author": "",
   "license": "MIT",

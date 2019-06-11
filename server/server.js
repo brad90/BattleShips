@@ -6,5 +6,11 @@ express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))
+  .get('/', (req, res) => res.render('client/public/index.html'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+
+  // res.statusCode = 200;
+  // res.setHeader('Content-Type', 'text/html');
+  // res.end('<h1>Hello World</h1>');
+  // });
