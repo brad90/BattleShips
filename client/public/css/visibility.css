@@ -40,6 +40,6 @@
 }
 
 @keyframes cloudMoves {
-    from {right: 0px;}
-    to {right: 90%;}
+    from {right: -100%;}
+    to {right: 100%;}
   }

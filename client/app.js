@@ -1,3 +1,4 @@
+
 const BattleShipForm = require('./src/views/battleship_form_view.js');
 const BattleShipNewGame = require('./src/models/new_game.js');
 const HitOrMiss = require('./src/views/battleship_hitOrNot_view.js');
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   overlay.bindEvents()
 
   const water = document.querySelector("#audio-water")
-  
+
 
   const battleShipNewGame = new BattleShipNewGame ()
   battleShipNewGame.newGameToBePlayed()
