@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "hompage":"https://github.com/brad90/personal_project_battleShips",
+  "dependencies": "express",
   "devDependencies": {
     "webpack": "^4.32.1",
     "webpack-cli": "^3.3.2"
