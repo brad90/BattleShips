@@ -3,16 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "hompage":"https://github.com/brad90/personal_project_battleShips",
-  "dependencies": "express",
+  "hompage": "https://brad90.github.io",
   "devDependencies": {
     "webpack": "^4.32.1",
     "webpack-cli": "^3.3.2"
   },
   "scripts": {
     "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node client/app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "MIT",
@@ -20,5 +18,8 @@
     "node",
     "heroku",
     "express"
-  ]
+  ],
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
