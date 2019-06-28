@@ -1,35 +1,37 @@
 {
-  "name": "battleships3",
-  "version": "v10.13.0",
-  "description": "BattleShips Game",
-  "main": "webpack.config.js",
-  "hompage": "https://brad90.github.io",
-  "devDependencies": {
-    "express": "^4.17.1",
-    "mocha": "^6.1.4",
-    "webpack": "^4.33.0",
-    "webpack-cli": "^3.3.3"
-  },
-  "scripts": {
-    "build": "webpack",
-    "start":"node server.js",
-    "test": "mocha client/src/specs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brad90/BattleShips.git",
+    "name": "battleships3",
+    "description": "BattleShips Game",
+    "main": "webpack.config.js",
+    "hompage": "https://brad90.github.io",
+    "devDependencies": {
+        "express": "^4.17.1",
+        "mocha": "^6.1.4",
+        "webpack": "^4.33.0",
+        "webpack-cli": "^3.3.3"
+    },
 
-  "author": "",
-  "license": "MIT",
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
-  "dependencies": {
-    "express": "^4.17.1"
-},
-  "engines": {
-    "node": "10.x"
-  },
+    "scripts": {
+        "build": "webpack",
+        "start":"node server.js",
+        "test": "mocha client/src/specs"
+    },
+
+    "engines": {
+        "node": "v10.13.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/brad90/BattleShips.git",
+
+        "author": "",
+        "license": "MIT",
+        "keywords": [
+            "node",
+            "heroku",
+            "express"
+        ]
+    },
+    "dependencies": {
+        "express": "^4.17.1"
+    }
 }

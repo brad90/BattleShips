@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./client/app.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./client/src/app.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./client/app.js":
-/*!***********************!*\
-  !*** ./client/app.js ***!
-  \***********************/
+/***/ "./client/src/app.js":
+/*!***************************!*\
+  !*** ./client/src/app.js ***!
+  \***************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nconst BattleShipForm = __webpack_require__(/*! ./src/views/battleship_form_view.js */ \"./client/src/views/battleship_form_view.js\");\nconst BattleShipNewGame = __webpack_require__(/*! ./src/models/new_game.js */ \"./client/src/models/new_game.js\");\nconst HitOrMiss = __webpack_require__(/*! ./src/views/battleship_hitOrNot_view.js */ \"./client/src/views/battleship_hitOrNot_view.js\");\nconst Overlay = __webpack_require__(/*! ./src/views/battleship_ship_overlay_page.js */ \"./client/src/views/battleship_ship_overlay_page.js\");\n\n\n\ndocument.addEventListener('DOMContentLoaded', () => {\n\n  const userInput = document.querySelector(\"#input-coordinates\")\n  const battleShipForm = new BattleShipForm(userInput)\n  battleShipForm.bindEvents()\n\n  const hitOrMiss = new HitOrMiss()\n  hitOrMiss.bindEvents()\n\n  const overlayContainer = document.querySelector('#overlay')\n  const overlay = new Overlay(overlayContainer)\n  overlay.bindEvents()\n\n  const water = document.querySelector(\"#audio-water\")\n\n\n  const battleShipNewGame = new BattleShipNewGame ()\n  battleShipNewGame.newGameToBePlayed()\n  battleShipNewGame.playerGuessInput()\n});\n\n\n//# sourceURL=webpack:///./client/app.js?");
+eval("\nconst BattleShipForm = __webpack_require__(/*! ./views/battleship_form_view.js */ \"./client/src/views/battleship_form_view.js\");\nconst BattleShipNewGame = __webpack_require__(/*! ./models/new_game.js */ \"./client/src/models/new_game.js\");\nconst HitOrMiss = __webpack_require__(/*! ./views/battleship_hitOrNot_view.js */ \"./client/src/views/battleship_hitOrNot_view.js\");\nconst Overlay = __webpack_require__(/*! ./views/battleship_ship_overlay_page.js */ \"./client/src/views/battleship_ship_overlay_page.js\");\n\n\n\ndocument.addEventListener('DOMContentLoaded', () => {\n\n  const userInput = document.querySelector(\"#input-coordinates\")\n  const battleShipForm = new BattleShipForm(userInput)\n  battleShipForm.bindEvents()\n\n  const hitOrMiss = new HitOrMiss()\n  hitOrMiss.bindEvents()\n\n  const overlayContainer = document.querySelector('#overlay')\n  const overlay = new Overlay(overlayContainer)\n  overlay.bindEvents()\n\n  const water = document.querySelector(\"#audio-water\")\n\n\n  const battleShipNewGame = new BattleShipNewGame ()\n  battleShipNewGame.newGameToBePlayed()\n  battleShipNewGame.playerGuessInput()\n});\n\n\n//# sourceURL=webpack:///./client/src/app.js?");
 
 /***/ }),
 

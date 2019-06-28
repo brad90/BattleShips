@@ -1,8 +1,8 @@
 
-const BattleShipForm = require('./src/views/battleship_form_view.js');
-const BattleShipNewGame = require('./src/models/new_game.js');
-const HitOrMiss = require('./src/views/battleship_hitOrNot_view.js');
-const Overlay = require('./src/views/battleship_ship_overlay_page.js');
+const BattleShipForm = require('./views/battleship_form_view.js');
+const BattleShipNewGame = require('./models/new_game.js');
+const HitOrMiss = require('./views/battleship_hitOrNot_view.js');
+const Overlay = require('./views/battleship_ship_overlay_page.js');
 
 
 
