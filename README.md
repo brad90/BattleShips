@@ -32,3 +32,6 @@ and a random letter between A - J to make the random letter. Using this function
 
 The final part fo the code was to ensure the coordinates don't overlap. I was going to house this in the main function but
 it was already doing alot in creating the coordinates. The method goes through the coordinates via a while loop.
+
+
+https://battleships-stephen-bradley.herokuapp.com/
