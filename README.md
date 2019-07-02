@@ -17,7 +17,9 @@ Although Battleships is a two player game, my goal was just to make a one player
 - Screen should display a grid and be able to record both failed hits and succesful hits.
 - Player should be able to see what ships are left to destroy.
 
-The code itself to position the ship and be able to play the game took 2-3 days while still attending CodeClan.
+The code itself to position the ship and be able to play the game took 2-3 days while still attending CodeClan. You can find the project on Heroku here:
+
+https://battleships-stephen-bradley.herokuapp.com/
 
 <h2> How it was built? </h2>
 
@@ -34,4 +36,4 @@ The final part fo the code was to ensure the coordinates don't overlap. I was go
 it was already doing alot in creating the coordinates. The method goes through the coordinates via a while loop.
 
 
-https://battleships-stephen-bradley.herokuapp.com/
+
