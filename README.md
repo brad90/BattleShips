@@ -26,7 +26,7 @@ The code itself to position the ship and be able to play the game took 2-3 days 
 I started off by breaking down the code step by step. I knew initally that I would need a randomised number between 1 - 10 
 and a random letter between A - J to make the random letter. Using this function allowed me to also get a random letter by using it to pick the index of an array of letters.
 
-<strong> Randomising coordinates: </strong>
+<strong> Setting the coordinates </strong>
 
 <strong> Checking if the coordinates don't overlap </strong>
 
