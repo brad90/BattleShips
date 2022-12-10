@@ -4,7 +4,7 @@
     "main": "webpack.config.js",
     "hompage": "https://brad90.github.io",
     "devDependencies": {
-        "express": "^4.17.1",
+        "express": "^4.17.3",
         "mocha": "^6.1.4",
         "webpack": "^4.33.0",
         "webpack-cli": "^3.3.3"
@@ -32,6 +32,6 @@
         ]
     },
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.3"
     }
 }
